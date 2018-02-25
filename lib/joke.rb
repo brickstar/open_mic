@@ -7,6 +7,4 @@ class Joke
     @question = joke[:question]
     @answer = joke[:answer]
   end
-
 end
-  
