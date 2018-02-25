@@ -28,6 +28,6 @@ class User
     data = CSV.open file, headers: true, header_converters: :symbol
       data.each do |joke|
       @jokes << Joke.new(joke)
-    end
+    end 
   end
 end
