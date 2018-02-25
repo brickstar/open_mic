@@ -1,3 +1,5 @@
+require 'csv'
+
 class User
   attr_reader :name,
               :jokes
@@ -18,6 +20,13 @@ class User
   def perform_routine_for(other_user)
     @jokes.each do |joke|
       other_user.learn(joke)
+    end
+  end
+
+  def learn_routine(file)
+    data = CSV.open file, headers: true, header_converters: :symbol
+      data.each do |joke|
+      @jokes << Joke.new(joke)
     end
   end
 end

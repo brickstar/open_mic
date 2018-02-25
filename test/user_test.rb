@@ -65,4 +65,10 @@ class UserTest < Minitest::Test
     assert_equal joke_2, josh.jokes[1]
     assert_equal 2, josh.jokes.count
   end
+
+  def test_user_can_learn_routine
+    casey = User.new("Casey")
+
+    assert_equal 100, casey.jokes.count
+  end
 end
