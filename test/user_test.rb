@@ -21,4 +21,10 @@ class UserTest < Minitest::Test
 
     assert_equal "Ali", ali.name
   end
+
+  def test_user_jokes_start_empty
+    sal = User.new("Sal")
+
+    assert_equal [], sal.jokes
+  end
 end
